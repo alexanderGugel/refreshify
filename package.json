@@ -1,0 +1,20 @@
+{
+  "name": "refreshify",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "tape test/**/*.js",
+    "example": "node bin/cmd.js ./example/index.js -d -o example/index.bundle.js -v"
+  },
+  "author": "Alexander Gugel <alexander.gugel@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^3.0.3"
+  },
+  "dependencies": {
+    "browserify": "^8.1.0",
+    "node-notifier": "^4.0.3",
+    "watchify": "^2.2.1"
+  },
+  "bin": "bin/cmd.js"
+}
