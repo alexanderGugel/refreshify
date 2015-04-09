@@ -32,7 +32,6 @@ if (!outfile) {
 var dotfile = path.join(path.dirname(outfile), '.' + path.basename(outfile));
 
 w.on('update', bundle);
-w.on('update', refreshServer.refresh.bind(refreshServer));
 bundle();
 
 function notifyError(errorMessage) {
@@ -69,6 +68,7 @@ function bundle () {
             if (verbose) {
                 console.error(bytes + ' bytes written to ' + outfile + ' (' + (time / 1000).toFixed(2) + ' seconds)');
             }
+            refreshServer.refresh();
         });
     });
 }
